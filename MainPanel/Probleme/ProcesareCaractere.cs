@@ -32,7 +32,7 @@ namespace MainPanel.Probleme
             TextReader txtReader = new StreamReader(n);
             string buffer;
             if(m == "d")
-                while ((buffer = txtReader.ReadLine()) != null) { Console.WriteLine(buffer); } 
+                while ((buffer = txtReader.ReadLine()) != null) { Console.WriteLine(buffer); }
 
             txtReader.Close(); txtReader = new StreamReader(n);
             while ((buffer = txtReader.ReadLine()) != null)
