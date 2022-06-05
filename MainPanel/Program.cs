@@ -1,10 +1,11 @@
-﻿namespace MainPanel
+﻿using MainPanel.Probleme;
+
+namespace MainPanel
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            start:
             Console.WriteLine("Lista probleme:");
             listaProb();
             Console.Write("Introduceti nr. problemei: ");
@@ -21,9 +22,9 @@
 
                     break;
                 default:
-                    Console.Clear();
-                    goto start;
+                    break;
             }
+            Console.ReadKey();
         }
         protected static void listaProb()
         {

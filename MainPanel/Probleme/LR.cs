@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MainPanel
+namespace MainPanel.Probleme
 {
     internal class LR
     {
@@ -15,9 +15,9 @@ namespace MainPanel
             Compute();
             WriteOutput();
         }
-        int n,c;
-        int[] v, L, R;
-        string[] data;
+        protected int n, c;
+        protected int[] v, L, R;
+        protected string[] data;
         protected void ReadInput()
         {
             Console.WriteLine("-LR-");
@@ -58,7 +58,7 @@ namespace MainPanel
             }
             for (int i = 0; i < n; i++)
                 if (R[i] == L[i])
-                    c++;                 
+                    c++;
         }
         protected void WriteOutput()
         {

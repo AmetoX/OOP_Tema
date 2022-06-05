@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MainPanel
+namespace MainPanel.Probleme
 {
     internal class ProcesareCaractere
     {
@@ -16,22 +16,27 @@ namespace MainPanel
             Compute();
             WriteOutput();
         }
-        private string n;
+        private string n,m;
         protected void ReadInput()
         {
             Console.Write("Scrieti calea fisierului: ");
             n = Console.ReadLine();
+            Console.Write("Doriti sa vedeti si continutul fisierului?(d/n): ");
+            m = Console.ReadLine();
             Console.WriteLine();
             //if (n[check - 3] == 't' && n[check - 2] == 'x' && n[check - 1] == 't')
         }
         private int car, c, v, l;
         protected void Compute()
         {
-            TextReader txtReader = new StreamReader(n);//26 caractere
+            TextReader txtReader = new StreamReader(n);
             string buffer;
+            if(m == "d")
+                while ((buffer = txtReader.ReadLine()) != null) { Console.WriteLine(buffer); } 
+
+            txtReader.Close(); txtReader = new StreamReader(n);
             while ((buffer = txtReader.ReadLine()) != null)
             {
-                Console.WriteLine(buffer);
                 l++;
                 int len = buffer.Length;
                 for (int i = 0; i < len; i++)
@@ -45,10 +50,9 @@ namespace MainPanel
                     {
                         v++;
                     }
-
-                    else if ((buffer[i] >= 'a' && buffer[i] >= 'z') || (buffer[i] >= 'A' && buffer[i] >= 'Z'))
+                    else if (buffer[i] >= 'a' && buffer[i] >= 'z' || buffer[i] >= 'A' && buffer[i] >= 'Z')
                         c++;
-                }                               
+                }
             }
         }
         protected void WriteOutput()
