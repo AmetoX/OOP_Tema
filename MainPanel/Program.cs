@@ -30,7 +30,7 @@ namespace MainPanel
         {
             Console.WriteLine("1.LR");
             Console.WriteLine("2.Procesare caractere dintr-un fisier text.");
-            Console.WriteLine("3. ");
+            //Console.WriteLine("3. ");
         }
     }
 }
