@@ -18,19 +18,15 @@ namespace MainPanel
                 case 2:
                     ProcesareCaractere prob2 = new ProcesareCaractere(); prob2.Initiate();
                     break;
-                case 3:
-
-                    break;
-                default:
-                    break;
             }
             Console.ReadKey();
         }
         protected static void listaProb()
         {
+            Console.WriteLine("---");
             Console.WriteLine("1.LR");
             Console.WriteLine("2.Procesare caractere dintr-un fisier text.");
-            //Console.WriteLine("3. ");
+            Console.WriteLine("---");
         }
     }
 }

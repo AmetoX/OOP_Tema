@@ -22,7 +22,7 @@ namespace MainPanel.Probleme
         {
             Console.WriteLine("-LR-");
             Console.WriteLine();
-            Console.WriteLine("Introduceti datele necesare(cate numere contine sirul; dupa sirul de nr despartite de un spatiu):");
+            Console.WriteLine("Introduceti datele necesare(cate numere contine sirul; dupa sirul de nr):");
             n = int.Parse(Console.ReadLine());
             data = new string[n];
             data = Console.ReadLine().Split(' ');

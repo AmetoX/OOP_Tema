@@ -19,12 +19,11 @@ namespace MainPanel.Probleme
         private string n,m;
         protected void ReadInput()
         {
-            Console.Write("Scrieti calea fisierului: ");
+            Console.Write("Scrieti calea completa fisierului: ");//ex: C:\...\...\...\...\OOP_Tema\MainPanel\Probleme\test.txt
             n = Console.ReadLine();
             Console.Write("Doriti sa vedeti si continutul fisierului?(d/n): ");
             m = Console.ReadLine();
-            Console.WriteLine();
-            //if (n[check - 3] == 't' && n[check - 2] == 'x' && n[check - 1] == 't')
+            Console.WriteLine("-------");
         }
         private int car, c, v, l;
         protected void Compute()
@@ -57,8 +56,8 @@ namespace MainPanel.Probleme
         }
         protected void WriteOutput()
         {
-            Console.WriteLine();
-            Console.WriteLine($"Numar de linii:{l}, carctere:{car}, vocale:{v}, consoane:{c}.");
+            Console.WriteLine("-------");
+            Console.WriteLine($"Numar de linii: {l}, carctere: {car}, vocale: {v}, consoane: {c}.");
         }
     }
 }
